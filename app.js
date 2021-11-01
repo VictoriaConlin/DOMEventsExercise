@@ -25,3 +25,26 @@ form.addEventListener(`submit`, j => {
     alert(enteredText);
 });
 
+// BONUS
+// 4a
+const darkMode = document.querySelector(`#dm`);
+// 4b
+const everything = document.querySelectorAll(`*`);
+darkMode.addEventListener(`click`, () => {
+    for (elements of everything){
+        elements.classList.toggle(`dark-mode`);
+    }
+});
+
+// 5a
+const reality = document.querySelector(`#reality`);
+// 5b
+let clickCount = 0;
+reality.addEventListener(`click`, () => {
+    clickCount++;
+    if(clickCount < 3){
+        alert("You have successfully moved to another reality");
+    } else if (clickCount === 3){
+        alert ("OH NO! You can only move to a new another reality a couple times. You are stuck in this reality!");
+    }
+});
